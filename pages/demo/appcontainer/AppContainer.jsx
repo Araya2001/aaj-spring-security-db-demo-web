@@ -20,7 +20,7 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import {container} from "../../../styles/Home.module.css";
 import {console} from "next/dist/compiled/@edge-runtime/primitives/console";
-import process from "eslint-config-next";
+
 
 const server = process.env.DOCKER === "true" ? "http://postgres_db_security_demo:8080" : "http://localhost:8080";
 
