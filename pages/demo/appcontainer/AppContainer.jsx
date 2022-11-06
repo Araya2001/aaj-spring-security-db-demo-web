@@ -21,6 +21,8 @@ import Box from "@mui/material/Box";
 import {container} from "../../../styles/Home.module.css";
 import {console} from "next/dist/compiled/@edge-runtime/primitives/console";
 
+const server = "http://localhost:8080";
+
 const safeTheme = createTheme({
     palette: {
         mode: "dark", primary: {
@@ -107,7 +109,7 @@ function AppContainer() {
             method: 'GET', redirect: 'follow'
         };
 
-        fetch("http://localhost:8080/security-db-demo/api/v1/safe-entity/product", requestOptions)
+        fetch(server + "/security-db-demo/api/v1/safe-entity/product", requestOptions)
             .then(response => {
                 if (response.status !== 200) {
                     setNotification(true);
@@ -123,7 +125,7 @@ function AppContainer() {
             method: 'GET', redirect: 'follow'
         };
 
-        fetch("http://localhost:8080/security-db-demo/api/v1/safe-entity/product/by-warehouse?id=" + id, requestOptions)
+        fetch(server + "/security-db-demo/api/v1/safe-entity/product/by-warehouse?id=" + id, requestOptions)
             .then(response => {
                 if (response.status !== 200) {
                     setNotification(true);
@@ -139,7 +141,7 @@ function AppContainer() {
             method: 'GET', redirect: 'follow'
         };
 
-        fetch("http://localhost:8080/security-db-demo/api/v1/unsafe-entity/product/by-warehouse?id=" + id, requestOptions)
+        fetch(server + "/security-db-demo/api/v1/unsafe-entity/product/by-warehouse?id=" + id, requestOptions)
             .then(response => {
                 if (response.status !== 200) {
                     setNotification(true);
