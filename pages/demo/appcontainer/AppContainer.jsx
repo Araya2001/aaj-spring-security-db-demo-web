@@ -181,6 +181,9 @@ function AppContainer() {
         {children}
     </Box>);
 
+    const SetBox2 = ({children}) => (<Box sx={{pt: 2}}>
+        {children}
+    </Box>);
     const DrawBox2 = ({children}) => (<Box sx={{pt: 2, pb: 2, px: 2}}>
         {children}
     </Box>);
@@ -242,12 +245,15 @@ function AppContainer() {
                         <DrawBox2>
                             <Paper elevation={5}>
                                 <DrawBox2>
-                                    <Grid container alignItems={"center"} justifyContent={"center"}>
+                                    <Grid container alignItems={"center"} justifyContent={"center"} columnGap={2}>
+
                                         <Grid item xs={10}>
-                                            <InputBox label={"ID - Warehouse"} inputRef={input}></InputBox>
+                                            <SetBox2>
+                                                <InputBox label={"ID - Warehouse"} inputRef={input}></InputBox>
+                                            </SetBox2>
                                         </Grid>
                                         <Grid item>
-                                            <SetBox>
+                                            <SetBox2>
                                                 <Button variant="contained" color={"success"}
                                                         style={{justifyContent: "center", alignContent: "center"}}
                                                         onClick={() => {
@@ -263,7 +269,8 @@ function AppContainer() {
                                                             }
 
                                                         }}>buscar</Button>
-                                            </SetBox>
+                                            </SetBox2>
+
                                         </Grid>
                                         <Grid item xs={11}>
                                             <DrawProducts></DrawProducts>
