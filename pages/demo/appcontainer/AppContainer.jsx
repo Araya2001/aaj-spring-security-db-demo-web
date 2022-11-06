@@ -182,7 +182,7 @@ function AppContainer() {
         {children}
     </Box>);
 
-    const SetBox2 = ({children}) => (<Box sx={{pt: 2}}>
+    const SetBox2 = ({children}) => (<Box sx={{py: 2}}>
         {children}
     </Box>);
     const DrawBox2 = ({children}) => (<Box sx={{pt: 2, pb: 2, px: 2}}>
