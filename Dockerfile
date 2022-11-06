@@ -53,5 +53,6 @@ USER nextjs
 EXPOSE 3000
 
 ENV PORT 3000
+ENV DOCKER true
 
 CMD ["node", "server.js"]
