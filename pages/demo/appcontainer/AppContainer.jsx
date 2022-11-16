@@ -22,7 +22,10 @@ import {container} from "../../../styles/Home.module.css";
 import {console} from "next/dist/compiled/@edge-runtime/primitives/console";
 
 
-const server = process.env.SERVER;
+const server = process.env.NEXT_PUBLIC_API_SERVER;
+
+console.log(server)
+console.log(process.env.API_SERVER);
 
 const safeTheme = createTheme({
     palette: {

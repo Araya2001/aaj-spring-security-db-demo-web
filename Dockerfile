@@ -53,6 +53,5 @@ USER nextjs
 EXPOSE 3000
 
 ENV PORT 3000
-ENV SERVER "http://localhost:8080"
 
 CMD ["node", "server.js"]
