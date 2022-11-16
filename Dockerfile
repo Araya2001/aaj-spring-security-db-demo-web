@@ -53,7 +53,6 @@ USER nextjs
 EXPOSE 3000
 
 ENV PORT 3000
-ENV DOCKER true
-ENV CLOUD false
+ENV SERVER "http://localhost:8080"
 
 CMD ["node", "server.js"]

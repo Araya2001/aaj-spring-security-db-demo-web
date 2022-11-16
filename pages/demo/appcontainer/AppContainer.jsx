@@ -22,13 +22,7 @@ import {container} from "../../../styles/Home.module.css";
 import {console} from "next/dist/compiled/@edge-runtime/primitives/console";
 
 
-let server = "http://localhost:8080";
-
-if (process.env.DOCKER === "true" && process.env.CLOUD === "false") {
-    server = "http://postgres_db_security_demo:8080";
-} else if (process.env.DOCKER === "true" && process.env.CLOUD === "true") {
-    server = "https://sql-inj.aaj-dev.io";
-}
+let server = process.env.SERVER;
 
 const safeTheme = createTheme({
     palette: {

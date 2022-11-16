@@ -53,7 +53,6 @@ USER nextjs
 EXPOSE 3000
 
 ENV PORT 3000
-ENV DOCKER true
-ENV CLOUD true
+ENV SERVER "https://sql-inj.aaj-dev.io"
 
 CMD ["node", "server.js"]
