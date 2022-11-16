@@ -54,6 +54,6 @@ EXPOSE 3000
 
 ENV PORT 3000
 ENV DOCKER true
-ENV CLOUD false
+ENV CLOUD true
 
 CMD ["node", "server.js"]
